@@ -1,0 +1,12 @@
+# Homepage Config
+isSinglePage = true
+
+# Meta Config
+description = "Hello"
+
+# Header Configuration
+avatar = "img/profile-picture.jpg"
+linkedin = "img/linkedin.svg"
+
+[emoji]
+enableEmoji = true

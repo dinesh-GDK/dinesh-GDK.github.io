@@ -1,0 +1,31 @@
+[[main]]
+    identifier = "home"
+    name = "About me"
+    url = "/"
+    weight = 1
+
+[[main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts"
+    weight = 2
+
+# Social Media Configuration
+
+[[social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/dinesh-GDK"
+    weight = 1
+
+[[social]]
+    identifier = "linkedin"
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/dinesh-gdk/"
+    weight = 2
+
+[[social]]
+    identifier = "devto"
+    name = "Dev.to"
+    url = "https://dev.to/dineshgdk"
+    weight = 3
