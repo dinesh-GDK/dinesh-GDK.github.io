@@ -65,7 +65,7 @@ The model performs well for the mazes of small and medium sizes, it struggles a 
 ### Conclusion
 Well, it has been very interesting working on this project. We know neural networks are being used to solve way more complex problems, but it is fascinating to look at them to solve algorithmic problems like these.
 
-Here is the link to the [Github repo] if you are curious to behind the scenes.
+Here is the link to the [Github repo] if you are curious to know behind the scenes.
 
 Also shoutout to this wonderful repo for providing the [U-Net code].
 
