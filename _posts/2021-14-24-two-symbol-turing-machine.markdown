@@ -64,7 +64,7 @@ The instructions are in three cards.
 
 <table>
     <tr>
-        <th colspan=4>CARD-1</th>
+        <th colspan=4>CARD-2</th>
     </tr>
     <tr>
         <th>SYMBOL</th>
@@ -88,7 +88,7 @@ The instructions are in three cards.
 
 <table>
     <tr>
-        <th colspan=4>CARD-1</th>
+        <th colspan=4>CARD-3</th>
     </tr>
     <tr>
         <th>SYMBOL</th>
