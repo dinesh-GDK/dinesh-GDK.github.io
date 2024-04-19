@@ -30,6 +30,7 @@ github_username:  dinesh-GDK
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-katex
 
 include:
   - _img
