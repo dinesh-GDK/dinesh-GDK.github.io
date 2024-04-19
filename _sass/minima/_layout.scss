@@ -50,6 +50,10 @@
     }
   }
 
+  .page-link-icon:hover {
+    text-decoration: none; 
+  }
+
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
