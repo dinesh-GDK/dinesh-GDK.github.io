@@ -14,7 +14,7 @@ If you have used PyTorch to build a neural network, you would have noticed that 
 
 $$ y = {x - μ \over \sqrt{σ^2}} * γ + β $$
 
-Where $x$ is a single sample from the batch, $μ$ is the mean of the batch and $σ^2$ is the variance of the batch. $γ$ and $β$ are the scale and shift learnable parameters respectively.
+Where $$x$$ is a single sample from the batch, $$μ$$ is the mean of the batch and $$σ^2$$ is the variance of the batch. $$γ$$ and $$β$$ are the scale and shift learnable parameters respectively.
 
 
 During training, we calculate the mean and variance of the entire batch and do the calculations. Also during this phase, we keep track of moving mean and moving variance across the batches. Why? Because we use these moving metrics during the evaluation phase. Why? Because when using the model in production or during evaluation we typically do not have the same batch size(sometimes we just use a single input).
@@ -35,7 +35,7 @@ So how do we overcome this problem? Math! Well, Math with a simple trick. Let us
 
 $$ μ_n = {X_1 + X_2 + X_3 + ... + X_{n-2} + X_{n-1} + X_n \over n} $$
 
-Where $X_i$ is a sample from $i^{th}$ batch. We assume that we know the mean for $n-1$ batches
+Where $$X_i$$ is a sample from $$i^{th}$$ batch. We assume that we know the mean for $$n-1$$ batches
 
 $$ μ_{n-1} = {X_1 + X_2 + X_3 + ... + X_{n-3} + X_{n-2} + X_{n-1} \over {n-1}} $$
 
