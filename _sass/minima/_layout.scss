@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  border-top: 5px solid var(--header-border-color);
+  border-bottom: 1px solid var(--border-color);
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -20,7 +20,7 @@
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: var(--grey-color-dark);
   }
 }
 
@@ -38,8 +38,48 @@
     display: none;
   }
 
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-right: 20px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    color: var(--text-color);
+
+    &:hover {
+      background-color: var(--grey-color-light);
+      opacity: 0.1;
+    }
+
+    .sun-icon,
+    .moon-icon {
+      width: 16px;
+      height: 16px;
+      stroke: var(--text-color);
+    }
+
+    .moon-icon {
+      display: none;
+    }
+  }
+
+  [data-theme="dark"] .theme-toggle {
+    .sun-icon {
+      display: none;
+    }
+    
+    .moon-icon {
+      display: block;
+    }
+  }
+
   .page-link {
-    color: $text-color;
+    color: var(--text-color);
     line-height: $base-line-height;
 
     top: 50%;
@@ -54,8 +94,8 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     text-align: right;
 
@@ -78,7 +118,7 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: var(--grey-color-dark);
       }
     }
 
@@ -90,6 +130,11 @@
     input:checked ~ .trigger {
       display: block;
       padding-bottom: 5px;
+    }
+
+    .theme-toggle {
+      margin: 5px 10px;
+      margin-left: 20px;
     }
 
     .page-link {
@@ -110,7 +155,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid var(--border-color);
   padding: $spacing-unit 0;
 }
 
@@ -127,7 +172,7 @@
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: $grey-color;
+  color: var(--grey-color);
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
@@ -203,7 +248,7 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  color: var(--grey-color);
 }
 
 .post-link {

@@ -10,6 +10,7 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
+// Light theme colors
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
 $brand-color:      #2a7ae2 !default;
@@ -17,6 +18,40 @@ $brand-color:      #2a7ae2 !default;
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
+
+// CSS Custom Properties for theme switching
+:root {
+  --text-color: #{$text-color};
+  --background-color: #{$background-color};
+  --brand-color: #{$brand-color};
+  --grey-color: #{$grey-color};
+  --grey-color-light: #{$grey-color-light};
+  --grey-color-dark: #{$grey-color-dark};
+  --code-background-color: #eef;
+  --border-color: #{$grey-color-light};
+  --header-border-color: #{$grey-color-dark};
+  
+  // Smooth transitions for theme switching
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Apply transitions to all elements that use theme colors
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+
+// Dark theme colors
+[data-theme="dark"] {
+  --text-color: #e1e1e1;
+  --background-color: #1a1a1a;
+  --brand-color: #4a9eff;
+  --grey-color: #b0b0b0;
+  --grey-color-light: #404040;
+  --grey-color-dark: #d0d0d0;
+  --code-background-color: #2d2d2d;
+  --border-color: #404040;
+  --header-border-color: #d0d0d0;
+}
 
 $table-text-align: left !default;
 
