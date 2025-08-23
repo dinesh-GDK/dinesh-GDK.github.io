@@ -31,6 +31,27 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
   --border-color: #{$grey-color-light};
   --header-border-color: #{$grey-color-dark};
   
+  // Syntax highlighting colors (light theme)
+  --syntax-comment: #998;
+  --syntax-error: #a61717;
+  --syntax-error-bg: #e3d2d2;
+  --syntax-keyword: #{$text-color};
+  --syntax-string: #d14;
+  --syntax-number: #099;
+  --syntax-builtin: #0086B3;
+  --syntax-type: #458;
+  --syntax-name: #900;
+  --syntax-attribute: #008080;
+  --syntax-constant: #008080;
+  --syntax-variable: #008080;
+  --syntax-regex: #009926;
+  --syntax-symbol: #990073;
+  --syntax-namespace: #555;
+  --syntax-tag: #000080;
+  --syntax-prompt: #555;
+  --syntax-output: #888;
+  --syntax-whitespace: #bbb;
+  
   // Smooth transitions for theme switching
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -51,6 +72,27 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
   --code-background-color: #2d2d2d;
   --border-color: #404040;
   --header-border-color: #d0d0d0;
+  
+  // Syntax highlighting colors (dark theme)
+  --syntax-comment: #6a9955;
+  --syntax-error: #f44747;
+  --syntax-error-bg: #3a1515;
+  --syntax-keyword: #569cd6;
+  --syntax-string: #ce9178;
+  --syntax-number: #b5cea8;
+  --syntax-builtin: #4fc1ff;
+  --syntax-type: #4ec9b0;
+  --syntax-name: #dcdcaa;
+  --syntax-attribute: #92c5f8;
+  --syntax-constant: #4fc1ff;
+  --syntax-variable: #9cdcfe;
+  --syntax-regex: #b46695;
+  --syntax-symbol: #c586c0;
+  --syntax-namespace: #d7ba7d;
+  --syntax-tag: #569cd6;
+  --syntax-prompt: #6a9955;
+  --syntax-output: #cccccc;
+  --syntax-whitespace: #404040;
 }
 
 $table-text-align: left !default;
