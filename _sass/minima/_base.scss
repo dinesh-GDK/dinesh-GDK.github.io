@@ -235,22 +235,20 @@ table {
   width: 100%;
   text-align: $table-text-align;
   color: var(--text-color);
-  opacity: 0.9;
   border-collapse: collapse;
   border: 1px solid var(--border-color);
   tr {
     &:nth-child(even) {
-      background-color: var(--grey-color-light);
-      opacity: 0.1;
+      background-color: var(--table-stripe-color);
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: var(--grey-color-light);
-    opacity: 0.2;
+    background-color: var(--table-header-color);
     border: 1px solid var(--border-color);
+    font-weight: 600;
   }
   td {
     border: 1px solid var(--border-color);

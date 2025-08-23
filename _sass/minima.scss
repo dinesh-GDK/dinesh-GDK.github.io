@@ -30,6 +30,8 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
   --code-background-color: #eef;
   --border-color: #{$grey-color-light};
   --header-border-color: #{$grey-color-dark};
+  --table-stripe-color: #f9f9f9;
+  --table-header-color: #f0f0f0;
   
   // Syntax highlighting colors (light theme)
   --syntax-comment: #998;
@@ -72,6 +74,8 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
   --code-background-color: #2d2d2d;
   --border-color: #404040;
   --header-border-color: #d0d0d0;
+  --table-stripe-color: #2a2a2a;
+  --table-header-color: #333333;
   
   // Syntax highlighting colors (dark theme)
   --syntax-comment: #6a9955;
