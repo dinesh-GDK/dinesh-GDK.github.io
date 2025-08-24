@@ -38,24 +38,29 @@
     display: none;
   }
 
-  .theme-toggle {
+  .theme-toggle,
+  .nav-button {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 4px;
-    margin-right: 20px;
-    border-radius: 4px;
+    margin-right: 8px;
+    border-radius: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
     color: var(--text-color);
+    vertical-align: middle;
+    line-height: 1;
+    min-height: 32px;
 
     &:hover {
       background-color: var(--grey-color-light);
-      opacity: 0.1;
+      opacity: 0.8;
     }
+  }
 
+  .theme-toggle {
     .sun-icon,
     .moon-icon {
       width: 16px;
@@ -68,25 +73,29 @@
     }
   }
 
-  [data-theme="dark"] .theme-toggle {
-    .sun-icon {
-      display: none;
-    }
-    
-    .moon-icon {
-      display: block;
-    }
+}
+
+[data-theme="dark"] .theme-toggle {
+  .sun-icon {
+    display: none;
+  }
+  
+  .moon-icon {
+    display: block;
   }
 
   .page-link {
     color: var(--text-color);
     line-height: $base-line-height;
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
 
-    top: 50%;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
+    &:hover {
+      background-color: var(--grey-color-light);
+      opacity: 0.8;
+      text-decoration: none;
     }
   }
 

@@ -49,5 +49,27 @@
     if (themeToggle) {
       themeToggle.addEventListener('click', toggleTheme);
     }
+
+    // Handle external nav button clicks (social media icons)
+    const externalNavButtons = document.querySelectorAll('.nav-button[data-href]:not(.page-nav-button)');
+    externalNavButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const href = this.getAttribute('data-href');
+        if (href) {
+          window.open(href, '_blank');
+        }
+      });
+    });
+
+    // Handle internal page navigation buttons
+    const pageNavButtons = document.querySelectorAll('.page-nav-button[data-href]');
+    pageNavButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const href = this.getAttribute('data-href');
+        if (href) {
+          window.location.href = href;
+        }
+      });
+    });
   });
 })();
