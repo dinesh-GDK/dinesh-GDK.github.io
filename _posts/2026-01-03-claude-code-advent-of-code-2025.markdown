@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using Claude Code using Advent of Code 2025"
+title: "Using Claude Code to solve Advent of Code 2025"
 date: 2026-01-02 10:00:00 -0700
 categories: Claude Code, AI, Advent of Code - 2025
 ---
