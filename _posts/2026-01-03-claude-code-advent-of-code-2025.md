@@ -11,6 +11,9 @@ Let's be honest: with LLMs, the fun of Advent of Code is gone. You can paste any
 
 The result: **20 out of 22 challenges solved (91% success rate)** with zero human-written code.
 
+<video src="https://github.com/user-attachments/assets/bbb2d8fa-72dc-4224-acbf-43486058dc24" controls="controls" style="max-width: 100%;">
+</video>
+
 ## The Setup
 
 I created a single file called [`INSTRUCTIONS.md`](https://github.com/dinesh-GDK/claude-code-advent-of-code-2025/blob/main/INSTRUCTIONS.md) with a 12-step process for each day:
