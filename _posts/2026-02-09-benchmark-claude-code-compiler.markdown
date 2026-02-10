@@ -117,7 +117,7 @@ The compiler correctly handles:
 - File I/O with error handling
 - String formatting and parsing
 
-**Implication:** CCC demonstrates a complete understanding of C semantics, type systems, and memory models. This is not merely translating syntax—it's implementing correct program behavior.
+**Implication:** CCC demonstrates a complete understanding of C semantics, type systems, and memory models. This is not merely translating syntax, it's implementing correct program behavior.
 
 <br>
 
@@ -163,7 +163,7 @@ Performance counters reveal *how* code executes, not just how long it takes.
 
 ### The Instruction Inflation Paradox
 
-CCC executes **3.3x more instructions** than GCC—yet performance is only 2.76x slower. How?
+CCC executes **3.3x more instructions** than GCC, yet performance is only 2.76x slower. How?
 
 To put this in perspective: the Busy Beaver 5 workload executes **47.2 million Turing machine steps**. GCC -O2 translates this into **2.27 billion x86-64 instructions** (~48 instructions per TM step), while CCC requires **7.48 billion instructions** (~159 instructions per TM step). That's a **3.3x code bloat**, yet the execution time penalty is only 2.76x.
 
@@ -180,7 +180,7 @@ In contrast, GCC's optimized code uses:
 - Tighter register dependencies
 - More aggressive instruction reordering
 
-This trades raw IPC for total instruction count—a net win in modern CPUs with deep pipelines and out-of-order execution.
+This trades raw IPC for total instruction count, a net win in modern CPUs with deep pipelines and out-of-order execution.
 
 ### Cache and Branch Prediction
 
@@ -201,7 +201,7 @@ This trades raw IPC for total instruction count—a net win in modern CPUs with 
 | **.bss** | 8 bytes | 1 byte | -88% |
 | **Total** | 7,440 bytes | 11,808 bytes | **+59%** |
 
-The code section bloat correlates directly with instruction count inflation. Interestingly, CCC produces *smaller* data sections—possibly due to different constant pooling strategies.
+The code section bloat correlates directly with instruction count inflation. Interestingly, CCC produces *smaller* data sections, possibly due to different constant pooling strategies.
 
 ### Assembly Code Metrics
 
@@ -318,7 +318,7 @@ CCC properly implements x86-64 calling conventions:
 
 ### Defensive Code Generation
 
-CCC emits `ud2` (undefined instruction trap) after `noreturn` functions like `exit()`. This is actually a best practice—prevents execution from continuing if `exit()` somehow returns.
+CCC emits `ud2` (undefined instruction trap) after `noreturn` functions like `exit()`. This is actually a best practice, prevents execution from continuing if `exit()` somehow returns.
 
 GCC trusts the `noreturn` attribute and omits this. CCC's approach is more defensive.
 
@@ -364,7 +364,7 @@ This aligns with our understanding of LLMs: they excel at pattern matching and l
 
 ### The Optimization Gap
 
-The 2.76x performance gap is not a fundamental limitation—it's an **optimization pass implementation gap**. The core compiler (parser, type checker, code generator) is sound.
+The 2.76x performance gap is not a fundamental limitation, it's an **optimization pass implementation gap**. The core compiler (parser, type checker, code generator) is sound.
 
 With targeted improvements, CCC could likely close this gap significantly:
 
@@ -385,22 +385,6 @@ With targeted improvements, CCC could likely close this gap significantly:
 
 <br>
 
-## Comparison to Historical Compilers
-
-To contextualize CCC's performance, consider historical compiler evolution:
-
-| Compiler | Era | Optimization Level |
-|----------|-----|-------------------|
-| **Early C Compilers (1970s)** | Dennis Ritchie's original | Minimal optimization |
-| **Portable C Compiler (1980s)** | Stephen Johnson | Basic register allocation |
-| **GCC 1.x (1987)** | Richard Stallman | Simple optimization passes |
-| **GCC 2.x (1992)** | Modern optimizations begin | Loop optimization, inlining |
-| **CCC (2026)** | AI-generated | Better than no optimization, worse than `-O1` |
-
-CCC's performance roughly matches early optimization-capable compilers from the late 1980s—impressive given it was generated entirely by an LLM.
-
-<br>
-
 ## Conclusion
 
 ### Summary of Findings
@@ -416,13 +400,13 @@ Claude's C Compiler represents a significant achievement in AI-generated softwar
 
 This benchmark demonstrates that **modern AI can implement complex, specification-heavy software correctly**, even for domains traditionally requiring deep expertise.
 
-The gap between CCC and GCC is not one of capability—it's a gap of *engineering investment*. GCC represents 30+ years of optimization research and implementation. CCC represents an initial, working baseline.
+The gap between CCC and GCC is not one of capability, it's a gap of *engineering investment*. GCC represents 30+ years of optimization research and implementation. CCC represents an initial, working baseline.
 
 ### Final Thoughts
 
-The most surprising result isn't that CCC is slower than GCC—it's that **CCC works at all**. Compiler construction courses span entire semesters; teams of engineers spend careers optimizing code generators.
+The most surprising result isn't that CCC is slower than GCC, it's that **CCC works at all**. Compiler construction courses span entire semesters; teams of engineers spend careers optimizing code generators.
 
-That an AI model can produce a functionally correct, ABI-compliant C compiler from scratch—one that handles pointers, dynamic memory, and complex control flow—marks a remarkable milestone.
+That an AI model can produce a functionally correct, ABI-compliant C compiler from scratch, one that handles pointers, dynamic memory, and complex control flow, marks a remarkable milestone.
 
 The optimization gap is not a limitation of AI capability. It's a reminder that **correctness and performance are separable concerns**, and AI has achieved the harder one first.
 
