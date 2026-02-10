@@ -7,7 +7,7 @@ categories: Claude_Code AI C_Compiler
 
 An empirical analysis of compiler correctness, performance, and code quality
 
-### Executive Summary
+### TL;DR
 
 I conducted a benchmark comparing GCC against Claude's C Compiler (CCC), an AI-generated compiler created by Claude Opus 4.6. Using a non-trivial Turing machine simulator as our test program, I evaluated correctness, execution performance, microarchitectural efficiency, and assembly code quality.
 
