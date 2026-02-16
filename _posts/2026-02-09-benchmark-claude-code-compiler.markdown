@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Benchmarking Claude C Compiler"
-date: 2026-01-02 10:00:00 -0700
+date: 2026-02-09 10:00:00 -0700
 categories: Claude_Code AI C_Compiler
 ---
 
