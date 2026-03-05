@@ -2,7 +2,9 @@
 layout: post
 title:  "Two Symbol Turing Machine"
 date:   2021-04-21 00:00:00 -0700
-categories: deep learning
+tags:
+    - turing-machine
+    - busy-beaver
 ---
 
 ## Introduction

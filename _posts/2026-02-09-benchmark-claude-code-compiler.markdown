@@ -2,7 +2,10 @@
 layout: post
 title: "Benchmarking Claude C Compiler"
 date: 2026-02-09 10:00:00 -0700
-categories: Claude_Code AI C_Compiler
+tags: 
+    - claude-code
+    - ai
+    - c-compiler
 ---
 
 An empirical analysis of compiler correctness, performance, and code quality

@@ -2,7 +2,10 @@
 layout: post
 title:  "Is Progress bar (tqdm) killing your code?"
 date:   2021-10-03 00:00:00 -0700
-categories: deep learning
+tags:
+    - progress-bar
+    - tqdm
+    - deep-learning
 ---
 
 ## Introduction

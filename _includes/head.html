@@ -12,6 +12,9 @@
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <script src="{{ "/assets/theme-toggle.js" | relative_url }}"></script>
+  {% if page.tags %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+  {% endif %}
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}

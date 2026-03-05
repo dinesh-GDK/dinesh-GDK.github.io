@@ -2,7 +2,8 @@
 layout: post
 title:  "Moving metrics in Batch Normalization"
 date:   2023-06-26 00:00:00 -0700
-categories: deep learning
+tags:
+    - deep-learning
 ---
 
 ## Introduction

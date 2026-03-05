@@ -2,7 +2,9 @@
 layout: post
 title:  "Deep Maze Solver"
 date:   2024-04-07 00:00:00 -0700
-categories: deep learning
+tags:
+    - deep-learning
+    - maze
 ---
 
 A few days ago saw a [Twitter Post] explaining that diffusion models could be used to solve algorithmic tasks like solving mazes. Intrigued by this post, I was curious to replicate this work at least on a smaller scale. So I began my journey to build a neural network that can solve mazes.
